@@ -69,7 +69,7 @@ A full-stack platform for [Describe your project's purpose here]. Built with Nex
 
 ### [E-Commerce Suite](https://github.com/StoreLunchFlow/ecommerce-store)
 A complete online store with a connected admin dashboard. Features product management, a shopping cart, and Stripe payment integration.
-*(🔗 Add your live demo link here after deploying this project)*
+*(🔗 omnipotent-suite.vercel.app after deploying this project)*
 
 ---
 
