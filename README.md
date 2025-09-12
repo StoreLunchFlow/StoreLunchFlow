@@ -40,3 +40,46 @@ I am actively seeking:
 **© 2025 StoreLunchFlow | Omniversal Solutions**  
 *Automation so advanced, it borders on clairvoyance.*
 
+# Hi there, I'm Store! 👋
+
+**Full-Stack Developer building modern, deployable web applications. I'm actively seeking new opportunities and freelance projects.**
+
+📧 **Email:** [Your Email Here](mailto:your.email@gmail.com)  
+💼 **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/yourprofile/)  
+🔗 **Portfolio:** [Live Demos Below](#-featured-projects)
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:** React, Next.js, TypeScript, Tailwind CSS  
+**Backend:** Node.js, Express, Python  
+**Database:** MongoDB, PostgreSQL, Prisma  
+**Tools & Platforms:** Git, GitHub, Vercel, Stripe, Google Maps API  
+
+## 🚀 Featured Projects (With Live Demos)
+
+### [Omnipotent Suite](https://github.com/StoreLunchFlow/omnipotent-suite)
+**🔗 [Live Demo](https://omnipotent-suite.vercel.app/)**
+A comprehensive full-stack application suite showcasing advanced capabilities. Built with a modern tech stack.
+
+### [StoreLunch](https://github.com/StoreLunchFlow/StoreLunch)
+**🔗 [Live Demo](https://omnipotent-suite-fi3vw7bya-john-whales-projects.vercel.app/)**
+A full-stack platform for [Describe your project's purpose here]. Built with Next.js 14, TypeScript, and MongoDB.
+
+### [E-Commerce Suite](https://github.com/StoreLunchFlow/ecommerce-store)
+A complete online store with a connected admin dashboard. Features product management, a shopping cart, and Stripe payment integration.
+*(🔗 Add your live demo link here after deploying this project)*
+
+---
+
+## 📊 GitHub Stats
+
+![StoreLunchFlow's GitHub Stats](https://github-readme-stats.vercel.app/api?username=StoreLunchFlow&show_icons=true&theme=radical)
+
+---
+
+<p align="center"> 
+  <i>Visitor count</i><br>
+  <img src="https://profile-counter.glitch.me/StoreLunchFlow/count.svg" />
+</p>
