@@ -20,13 +20,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Ruby
+
+      # ULTIMATE FIX: Create a default Gemfile if one does not exist to prevent build failures
+      - name: Provision Default Gemfile
+        run: |
+          if [ ! -f "./Gemfile" ]; then
+            echo "Source: https://github.com/github/pages-gem" > ./Gemfile
+            echo "source 'https://rubygems.org'" >> ./Gemfile
+            echo "gem 'github-pages', group: :jekyll_plugins" >> ./Gemfile
+          fi
+
+      - name: Setup Ruby & Install Dependencies
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: true
+          bundler-cache: true # Installs gems from the Gemfile, now guaranteed to exist
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --destination ./_site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
