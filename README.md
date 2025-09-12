@@ -82,3 +82,6 @@ A complete online store with a connected admin dashboard. Features product manag
   <i>Visitor count</i><br>
   <img src="https://profile-counter.glitch.me/StoreLunchFlow/count.svg" />
 </p>
+<p align="left">
+  <img src="https://github-profile-trophy.vercel.app/?username=StoreLunchFlow&theme=radical&column=3&margin-w=15&margin-h=15" alt="StoreLunchFlow's GitHub Trophies" />
+</p>
