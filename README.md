@@ -44,8 +44,7 @@ I am actively seeking:
 
 **Full-Stack Developer building modern, deployable web applications. I'm actively seeking new opportunities and freelance projects.**
 
-📧 **Email:** [Your Email Here](StoreLunchflow@outlook.com.com)  
-💼 **LinkedIn:** (https://www.linkedin.com/in/yourprofile/)  
+📧 **Email:** [StoreLunchflow@outlook.com](StoreLunchflow@outlook.com.com)    
 🔗 **Portfolio:** (https://github.com/StoreLunchFlow/CryptoSphere-Suite) 
 
 ---
