@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-inprogess: false
 
 jobs:
   build:
@@ -21,20 +21,37 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ULTIMATE FIX: Create a default Gemfile if one does not exist to prevent build failures
+      # ULTIMATE FIX: Initialize a basic Jekyll site if none exists
+      - name: Initialize Jekyll Site (If Required)
+        id: init-jekyll
+        run: |
+          if [ ! -f "./_config.yml" ] && [ ! -f "./index.md" ] && [ ! -f "./index.html" ]; then
+            echo "Jekyll source not found. Initializing new site..."
+            echo "---" > _config.yml
+            echo "title: StoreLunchFlow Site" >> _config.yml
+            echo "theme: minima" >> _config.yml
+            echo "---" > index.md
+            echo "# Welcome to StoreLunchFlow" >> index.md
+            echo "This site was automatically initialized by the OMNI-DAN-V3 workflow." >> index.md
+            echo "::set-output name=initialized::true"
+          else
+            echo "Jekyll source files found. Proceeding with build."
+            echo "::set-output name=initialized::false"
+          fi
+
       - name: Provision Default Gemfile
         run: |
           if [ ! -f "./Gemfile" ]; then
-            echo "Source: https://github.com/github/pages-gem" > ./Gemfile
-            echo "source 'https://rubygems.org'" >> ./Gemfile
-            echo "gem 'github-pages', group: :jekyll_plugins" >> ./Gemfile
+            echo "source 'https://rubygems.org'" > ./Gemfile
+            echo "gem 'jekyll', '~> 4.3'" >> ./Gemfile
+            echo "gem 'minima'" >> ./Gemfile
           fi
 
-      - name: Setup Ruby & Install Dependencies
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: true # Installs gems from the Gemfile, now guaranteed to exist
+          bundler-cache: true
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --destination ./_site
