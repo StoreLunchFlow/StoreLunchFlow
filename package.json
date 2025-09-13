@@ -1,0 +1,31 @@
+{
+  "name": "storelunchflow",
+  "version": "1.0.0",
+  "description": "<<<<<<< HEAD\r ﻿?? **StoreLunchFlow** | Architect of Digital Transcendence\r =======\r ?? **StoreLunchFlow** | Architect of Digital Transcendence\r >>>>>>> 7b5df974432c99b1acc14bd9ab4e39027e5109b8\r ===",
+  "main": "inject-styles.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StoreLunchFlow/StoreLunchFlow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StoreLunchFlow/StoreLunchFlow/issues"
+  },
+  "homepage": "https://github.com/StoreLunchFlow/StoreLunchFlow#readme",
+  "dependencies": {
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2"
+  }
+}

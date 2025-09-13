@@ -1,1 +1,59 @@
-.vercel
+# Dependencies
+node_modules/
+.npm
+.pnpm
+
+# Build outputs
+*.nupkg
+*.nuspec
+/bin/
+/obj/
+/dist/
+/build/
+
+# Logs
+*.log
+logs/
+github_update_log_*.log
+
+# Runtime data
+publish/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Package files
+package-lock.json
+
+# Local configuration
+.env
+.local
+.env.local
+
+# NuGet packages
+*.nupkg
+
+# Build directories
+CryptoSphere-Suite/
+StoreLunchFlow-API/
+StoreLunchFlow-Core/
+StoreLunchFlow.Core/
+
+# Compiled files
+*.css
+*.js
+network.html
+
+# Temporary files
+temp/
+tmp/
+
+# Vercel deployment.vercel/
