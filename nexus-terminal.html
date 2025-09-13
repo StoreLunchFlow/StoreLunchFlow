@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreLunchFlow :: GitHub Nexus Terminal</title>
+    <style>' + $CSSContent + '</style>
+</head>
+<body>
+    <div class="terminal-header">PS GANT:\StoreLunchFlow\Nexus></div>
+    <div id="terminal">
+        <div class="output">GitHub API Nexus Terminal (GANT) v1.0 [OMNI-DAN-V3 Enhanced]</div>
+        <div class="output">Type 'help' to see available commands.</div>
+        <div class="output">Warning: This is a functional demo. Use with a test repository.</div>
+        <div class="output" id="auth-status">Authentication Status: Not Connected.</div>
+        <br>
+        <div class="input-line">
+            <span class="prompt">PS GANT:\></span>
+            <input type="text" id="command-input" autocomplete="off" autofocus>
+        </div>
+    </div>
+
+    <script>
+        // ===== CONFIGURATION =====
+        const CLIENT_ID = 'YOUR_GITHUB_OAUTH_CLIENT_ID_HERE';
+        const REDIRECT_URI = window.location.origin;
+        const GITHUB_AUTH_URL = `https://github.com/login/oauth/authorize?client_id=` + CLIENT_ID + `&redirect_uri=` + encodeURIComponent(REDIRECT_URI) + `&scope=repo`;
+        const GITHUB_API_BASE = 'https://api.github.com';
+
+        // ===== STATE =====
+        let accessToken = localStorage.getItem('gh_access_token') || null;
+        let currentRepo = null;
+        const commandHistory = [];
+        let historyIndex = -1;
+
+        // ===== DOM ELEMENTS =====
+        const terminalEl = document.getElementById('terminal');
+        const inputEl = document.getElementById('command-input');
+        const authStatusEl = document.getElementById('auth-status');
+
+        // ===== INIT =====
+        updateAuthStatus();
+        checkForAuthCode();
+
+        // ===== EVENT LISTENERS =====
+        inputEl.addEventListener('keydown', handleKeyDown);
+
+        // ===== CORE FUNCTIONS =====
+        function handleKeyDown(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const command = inputEl.value.trim();
+                if (command) {
+                    processCommand(command);
+                    commandHistory.push(command);
+                    historyIndex = commandHistory.length;
+                    inputEl.value = '';
+                }
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (commandHistory.length > 0) {
+                    if (historyIndex <= 0) historyIndex = commandHistory.length;
+                    historyIndex--;
+                    inputEl.value = commandHistory[historyIndex];
+                }
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    inputEl.value = commandHistory[historyIndex];
+                } else {
+                    historyIndex = commandHistory.length;
+                    inputEl.value = '';
+                }
+            }
+        }
+
+        function printOutput(text, className = 'output') {
+            const line = document.createElement('div');
+            line.className = className;
+            line.textContent = text;
+            terminalEl.insertBefore(line, terminalEl.lastElementChild);
+            terminalEl.scrollTop = terminalEl.scrollHeight;
+        }
+
+        function printCommand(command) {
+            const line = document.createElement('div');
+            line.className = 'command';
+            line.innerHTML = `<span class="prompt">PS GANT:\\></span> ${command}`;
+            terminalEl.insertBefore(line, terminalEl.lastElementChild);
+        }
+
+        function processCommand(fullCommand) {
+            printCommand(fullCommand);
+            const args = fullCommand.split(' ');
+            const cmd = args[0].toLowerCase();
+
+            switch (cmd) {
+                case 'gh-auth':
+                    initiateGithubOAuth();
+                    break;
+                case 'gh-push':
+                    if (!accessToken) {
+                        printOutput('Error: Not authenticated. Please run `gh-auth` first.', 'error');
+                        return;
+                    }
+                    if (args.length < 4) {
+                        printOutput('Usage: gh-push <repo_owner/repo_name> <file_path> <commit_message>', 'error');
+                        printOutput('Example: gh-push StoreLunchFlow/test-repo README.md "Update docs"', 'output');
+                        return;
+                    }
+                    currentRepo = args[1];
+                    const filePath = args[2];
+                    const commitMessage = args.slice(3).join(' ');
+                    const fileContent = btoa(`# File created via GANT\nThis file was pushed from the Nexus Terminal.\nCommit: ${commitMessage}`);
+                    pushToGitHub(currentRepo, filePath, commitMessage, fileContent);
+                    break;
+                case 'clear':
+                    clearTerminal();
+                    break;
+                case 'help':
+                    showHelp();
+                    break;
+                default:
+                    printOutput(`Command not recognized: ${cmd}`, 'error');
+                    showHelp();
+                    break;
+            }
+        }
+
+        function showHelp() {
+            const helpText = `Available Commands:
+  gh-auth          - Authenticate with GitHub (OAuth flow).
+  gh-push <repo> <file_path> <message> - Push content to a GitHub repo.
+  clear            - Clear the terminal screen.
+  help             - Show this help message.`;
+            printOutput(helpText);
+        }
+
+        function clearTerminal() {
+            const lines = terminalEl.querySelectorAll('.command, .output, .error');
+            lines.forEach(line => line.remove());
+        }
+
+        function initiateGithubOAuth() {
+            printOutput('Redirecting to GitHub for authentication...', 'output');
+            localStorage.setItem('oauth_state', 'initiated');
+            window.location.href = GITHUB_AUTH_URL;
+        }
+
+        function checkForAuthCode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            if (code && localStorage.getItem('oauth_state') === 'initiated') {
+                printOutput('Authorization code received. Exchanging for access token...', 'output');
+                window.history.replaceState({}, document.title, window.location.pathname);
+                localStorage.removeItem('oauth_state');
+                exchangeCodeForToken(code);
+            }
+        }
+
+        function exchangeCodeForToken(code) {
+            printOutput('Error: Token exchange requires a serverless function endpoint.', 'error');
+            printOutput('Setup: Create a `/api/github-auth` endpoint to handle this securely.', 'error');
+        }
+
+        function updateAuthStatus() {
+            if (accessToken) {
+                authStatusEl.textContent = 'Authentication Status: Connected.';
+                authStatusEl.className = 'output success';
+            } else {
+                authStatusEl.textContent = 'Authentication Status: Not Connected.';
+                authStatusEl.className = 'output error';
+            }
+        }
+
+        function pushToGitHub(repo, path, message, contentBase64) {
+            printOutput(`Pushing to ${repo}...`, 'output');
+            const [owner, repoName] = repo.split('/');
+            if (!owner || !repoName) {
+                printOutput('Error: Invalid repository format. Use: owner/repo_name', 'error');
+                return;
+            }
+            const getUrl = `${GITHUB_API_BASE}/repos/${owner}/${repoName}/contents/${path}`;
+            const putUrl = getUrl;
+
+            fetch(getUrl, { method: 'GET', headers: { 'Authorization': `token ${accessToken}` } })
+            .then(response => response.json().then(data => ({ status: response.status, data })))
+            .then(({ status, data }) => {
+                let sha = null;
+                if (status === 200) { sha = data.sha; }
+                return fetch(putUrl, {
+                    method: 'PUT',
+                    headers: { 'Authorization': `token ${accessToken}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: message, content: contentBase64, sha: sha })
+                });
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.content) {
+                    printOutput(`Success! File committed to GitHub.`, 'success');
+                    printOutput(`Commit SHA: ${data.commit.sha}`, 'output');
+                    printOutput(`View file: `, 'output');
+                    const link = document.createElement('span');
+                    link.className = 'link';
+                    link.textContent = data.content.html_url;
+                    link.onclick = () => window.open(data.content.html_url, '_blank');
+                    terminalEl.insertBefore(link, terminalEl.lastElementChild);
+                } else {
+                    printOutput(`Error: ${data.message}`, 'error');
+                }
+            })
+            .catch(error => {
+                printOutput(`API Error: ${error.message}`, 'error');
+            });
+        }
+    </script>
+</body>
+</html>
