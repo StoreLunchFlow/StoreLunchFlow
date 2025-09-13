@@ -1,18 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StoreLunchFlow - Enterprise Solutions</title>
-    <meta name="description" content="Professional software development and workflow automation solutions">
+    <title>StoreLunchFlow | PowerShell Architect & Automation Visionary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
-            --secondary: #64748b;
+            --secondary: #7e22ce;
             --accent: #f59e0b;
-            --light: #f8fafc;
             --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
             --success: #10b981;
         }
         
@@ -20,216 +21,567 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
             line-height: 1.6;
-            color: var(--dark);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
         }
         
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 20px;
         }
         
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
+            padding: 1rem 0;
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
         
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .logo {
-            font-size: 4rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, var(--accent), #ff6b6b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            display: flex;
+            align-items: center;
         }
         
-        h1 {
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #cbd5e1;
         }
         
         .tagline {
-            font-size: 1.5rem;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            font-weight: 600;
         }
         
-        .cta-button {
+        .btn {
             display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            padding: 0.8rem 1.8rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            text-decoration: none;
             border-radius: 50px;
+            text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
         
-        .features {
-            padding: 5rem 0;
-            background: var(--light);
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
             color: var(--primary);
         }
         
-        .feature-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
+        .btn-outline:hover {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
         }
         
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Profile Section */
+        .profile {
+            background-color: #1e293b;
+            border-radius: 15px;
+            padding: 3rem;
+            margin: 2rem auto;
+            max-width: 900px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 2rem;
+            font-size: 3rem;
+        }
+        
+        .profile-info h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-info p {
+            color: #cbd5e1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-contact {
+            margin-top: 1rem;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: #1e293b;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border: 1px solid #334155;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #334155;
+        }
+        
+        .project-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .project-header h3 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .project-body {
+            padding: 1.5rem;
+        }
+        
+        .project-description {
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-tech span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-updated {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background-color: #1e293b;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .skill-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-category h3 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .skill-list li i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .contact .section-title h2 {
+            background: linear-gradient(135deg, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info h3 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .contact-details {
+            list-style: none;
+        }
+        
+        .contact-details li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details li i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+            width: 30px;
+        }
+        
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
         footer {
-            background: var(--dark);
+            background-color: #0f172a;
             color: white;
             padding: 3rem 0;
             text-align: center;
+            border-top: 1px solid #334155;
         }
         
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .logo { font-size: 3rem; }
-            h1 { font-size: 2.5rem; }
-            .tagline { font-size: 1.2rem; }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+            .nav-links {
+                display: none;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            
+            .hero h1 {
+                font-size: 2.5rem;
             }
-        }
-        
-        .animate {
-            animation: fadeInUp 0.6s ease-out;
+            
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-avatar {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <div class="hero-content">
-            <div class="logo">StoreLunchFlow</div>
-            <h1>Enterprise-Grade Software Solutions</h1>
-            <p class="tagline">Transforming complex workflows into seamless digital experiences</p>
-            <a href="#contact" class="cta-button">Get Started</a>
-        </div>
-    </div>
-
-    <section class="features">
+    <!-- Header & Navigation -->
+    <header>
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--dark);">Our Services</h2>
-            <div class="features-grid">
-                <div class="feature-card animate">
-                    <div class="feature-icon">🚀</div>
-                    <h3 class="feature-title">Web Development</h3>
-                    <p>Modern, responsive websites built with cutting-edge technologies and best practices.</p>
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>StoreLunchFlow</span>
                 </div>
-                <div class="feature-card animate">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Workflow Automation</h3>
-                    <p>Streamline your operations with custom automation solutions that save time and reduce errors.</p>
-                </div>
-                <div class="feature-card animate">
-                    <div class="feature-icon">🔧</div>
-                    <h3 class="feature-title">DevOps & CI/CD</h3>
-                    <p>Robust deployment pipelines and infrastructure management for reliable software delivery.</p>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#repositories">Repositories</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="tagline">🚀 PowerShell GOD-Mode Architect</span>
+                <h1>Cloud Automation Visionary</h1>
+                <p>Building Omniversal Solutions with enterprise-grade PowerShell automation and cloud orchestration</p>
+                <div class="hero-buttons">
+                    <a href="#repositories" class="btn">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Profile Section -->
+    <section>
         <div class="container">
-            <p>&copy; 2024 StoreLunchFlow. All rights reserved.</p>
-            <p>Professional software solutions built with excellence.</p>
+            <div class="profile">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h2>John Whale</h2>
+                        <p>🚀 PowerShell GOD-Mode Architect | Cloud Automation Visionary</p>
+                        <p>Building Omniversal Solutions</p>
+                        <div class="profile-contact">
+                            <p><i class="fas fa-envelope"></i> StoreLunchFlow@outlook.com</p>
+                            <p><i class="fas fa-building"></i> Omnipotent Solutions - Global Remote</p>
+                            <p><i class="fas fa-calendar"></i> Joined GitHub: September 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <p>Expert in creating enterprise-grade PowerShell automation frameworks, cloud orchestration solutions, and cryptocurrency management systems. Passionate about building robust, scalable solutions that solve complex problems.</p>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll('.animate');
+    <!-- Repositories Section -->
+    <section id="repositories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Repositories</h2>
+                <p>Explore my portfolio of professional automation solutions and frameworks</p>
+            </div>
             
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            animatedElements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'all 0.6s ease-out';
-                observer.observe(el);
-            });
-        });
-    </script>
-</body>
-</html>
+            <div class="projects-grid">
+                <!-- Repository 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fab fa-github"></i> StoreLunchFlow</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">My Professional Profile & Portfolio - HTML-based showcase of my work and skills.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-updated">Updated 6 hours ago</span>
+                        <a href="https://github.com/StoreLunchFlow/StoreLunchFlow" class="btn">View Repository</a>
+                    </div>
+                </div>
+                
+                <!-- Repository 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-coins"></i> CryptoSphere-Suite</h3>
+                    </div>
+                    <div
