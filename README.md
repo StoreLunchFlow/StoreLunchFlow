@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ï»¿?? **StoreLunchFlow** | Architect of Digital Transcendence
+=======
+?? **StoreLunchFlow** | Architect of Digital Transcendence
+>>>>>>> 7b5df974432c99b1acc14bd9ab4e39027e5109b8
 === 
 
 **? Cybernetic Virtuoso | DevOps Oracle | Infrastructure Alchemist | Full-Stack Developer**
@@ -59,5 +63,9 @@ I am actively seeking:
   <img src="https://profile-counter.glitch.me/StoreLunchFlow/count.svg" />
 </p>
 
+<<<<<<< HEAD
 **ï¿½ 2025 StoreLunchFlow | Omniversal Solutions**  
+=======
+**© 2025 StoreLunchFlow | Omniversal Solutions**  
+>>>>>>> 7b5df974432c99b1acc14bd9ab4e39027e5109b8
 *Automation so advanced, it borders on clairvoyance.*
