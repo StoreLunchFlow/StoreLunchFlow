@@ -5,6 +5,20 @@
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=StoreLunchFlow&show_icons=true&theme=radical&hide_title=true)](https://github.com/StoreLunchFlow)
 [![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=StoreLunchFlow&layout=compact&theme=radical&hide_title=true)](https://github.com/StoreLunchFlow)
 
+## 🚀 Featured Project: CryptoSphere-Suite
+
+🔥 **Looking for elite cryptocurrency management tools?** Explore my flagship project:
+
+[![CryptoSphere-Suite](https://img.shields.io/badge/🚀_CryptoSphere_Suite-Enterprise_Crypto_Platform-blue?style=for-the-badge&logo=bitcoin)](https://github.com/StoreLunchFlow/CryptoSphere-Suite)
+
+**CryptoSphere-Suite** is a comprehensive PowerShell framework for advanced cryptocurrency operations, featuring:
+- Multi-wallet support and management
+- Advanced cryptographic security protocols
+- Automated trading and portfolio management
+- Enterprise-grade monitoring and analytics
+
+**👉 [Explore CryptoSphere-Suite Now](https://github.com/StoreLunchFlow/CryptoSphere-Suite)**
+
 ## 🛠️ Technical Proficiency
 
 *   **DevOps & Automation:** PowerShell | Python | Ansible | GitHub Actions | Docker | Terraform | CI/CD Pipelines
@@ -15,7 +29,7 @@
 
 ## 💻 Portfolio Highlights
 
-*   **[CryptoSphere-Suite](https://github.com/StoreLunchFlow/CryptoSphere-Suite)** - A PowerShell module suite for cryptographic operations, key management, and enhancing automation security.
+*   **[CryptoSphere-Suite](https://github.com/StoreLunchFlow/CryptoSphere-Suite)** - Advanced PowerShell framework for cryptocurrency management, trading automation, and blockchain operations.
 *   **[Omnipotent-Suite](https://github.com/StoreLunchFlow/Omnipotent-Suite)** - An enterprise-grade PowerShell framework designed for system orchestration, administrative task automation, and DevOps workflows.
 *   **[StoreLunch E-Commerce Platform](https://github.com/StoreLunchFlow/StoreLunch)** - A full-stack e-commerce application with admin dashboard, product management, and Stripe integration. Built with **Next.js 14**, **TypeScript**, and **MongoDB**.
 
