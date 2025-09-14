@@ -2,8 +2,14 @@
 
 > Building digital experiences that merge technical excellence with market relevance. I architect robust systems, create compelling applications, and optimize for growth.
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=StoreLunchFlow&show_icons=true&theme=radical&hide_title=true)](https://github.com/StoreLunchFlow)
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=StoreLunchFlow&layout=compact&theme=radical&hide_title=true)](https://github.com/StoreLunchFlow)
+<!-- Achievement-Focused Badge Cluster -->
+[![GitHub Trophy](https://github-profile-trophy.vercel.app/?username=StoreLunchFlow&theme=onedark&column=7&margin-w=15&margin-h=15&no-bg=true&no-frame=true)](https://github.com/ryo-ma/github-profile-trophy)
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=StoreLunchFlow&theme=dark&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&mode=weekly)](https://git.io/streak-stats)
+[![StoreLunchFlow's GitHub Stats](https://github-readme-stats.vercel.app/api?username=StoreLunchFlow&show_icons=true&theme=vision-friendly-dark&hide_border=true&include_all_commits=true&count_private=true&hide=prs,issues)](https://github.com/StoreLunchFlow)
+
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=StoreLunchFlow&layout=compact&theme=vision-friendly-dark&hide_border=true&langs_count=8&hide=html,css)](https://github.com/StoreLunchFlow)
+[![Visitors](https://komarev.com/ghpvc/?username=StoreLunchFlow&label=Profile+Views&color=0e75b6&style=flat)](https://github.com/StoreLunchFlow)
 
 ## 🚀 Featured Project: CryptoSphere-Suite
 
