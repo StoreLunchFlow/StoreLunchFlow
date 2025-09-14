@@ -1,6 +1,6 @@
-﻿# StoreLunchFlow | DevOps Engineer & Full-Stack Developer
+﻿# StoreLunchFlow | Developer · Creator · Digital Marketer
 
-> Engineering robust, scalable, and automated solutions through infrastructure as code and modern development practices.
+> Building digital experiences that merge technical excellence with market relevance. I architect robust systems, create compelling applications, and optimize for growth.
 
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=StoreLunchFlow&show_icons=true&theme=radical&hide_title=true)](https://github.com/StoreLunchFlow)
 [![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=StoreLunchFlow&layout=compact&theme=radical&hide_title=true)](https://github.com/StoreLunchFlow)
@@ -11,6 +11,7 @@
 *   **Cloud & Infrastructure:** Microsoft Azure | Amazon Web Services (AWS) | Kubernetes | Infrastructure as Code (IaC)
 *   **Security & Compliance:** Cryptography | Zero-Trust Architecture | DevSecOps | Security Hardening
 *   **Full-Stack Development:** React | Next.js | TypeScript | Node.js | Express | MongoDB | PostgreSQL | REST APIs
+*   **Digital Marketing:** Growth Strategy | SEO Optimization | Conversion Funnels | Analytics
 
 ## 💻 Portfolio Highlights
 
@@ -21,14 +22,14 @@
 ## 📫 Professional Engagement
 
 I am actively seeking opportunities in:
-*   **DevOps & Site Reliability Engineering (SRE)**
-*   **Cloud Infrastructure Architecture**
-*   **Backend & Full-Stack Development**
-*   **Technical Consulting & Project Collaboration**
+*   **Full-Stack Development & Technical Creation**
+*   **DevOps & Cloud Infrastructure Architecture**
+*   **Digital Product Development & Marketing Strategy**
+*   **Technical Consulting & Growth-Focused Projects**
 
-**Let's connect and discuss how I can contribute to your team:**  
+**Let's connect and discuss how I can contribute to your vision:**  
 **Email:** [StoreLunchFlow@outlook.com](mailto:StoreLunchFlow@outlook.com)  
 **GitHub:** [https://github.com/StoreLunchFlow](https://github.com/StoreLunchFlow)
 
 ---
-© 2025 StoreLunchFlow | Portfolio
+© 2025 StoreLunchFlow | Developer · Creator · Digital Marketer
