@@ -1,71 +1,34 @@
-<<<<<<< HEAD
-﻿?? **StoreLunchFlow** | Architect of Digital Transcendence
-=======
-?? **StoreLunchFlow** | Architect of Digital Transcendence
->>>>>>> 7b5df974432c99b1acc14bd9ab4e39027e5109b8
-=== 
+﻿# StoreLunchFlow | DevOps Engineer & Full-Stack Developer
 
-**? Cybernetic Virtuoso | DevOps Oracle | Infrastructure Alchemist | Full-Stack Developer**
+> Engineering robust, scalable, and automated solutions through infrastructure as code and modern development practices.
 
-> *"First principles, relentless automation, and architectural elegance - the trinity of engineering transcendence."*
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=StoreLunchFlow&show_icons=true&theme=radical&hide_title=true)](https://github.com/StoreLunchFlow)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=StoreLunchFlow&layout=compact&theme=radical&hide_title=true)](https://github.com/StoreLunchFlow)
 
----
+## 🛠️ Technical Proficiency
 
-## ?? GitHub Analytics
+*   **DevOps & Automation:** PowerShell | Python | Ansible | GitHub Actions | Docker | Terraform | CI/CD Pipelines
+*   **Cloud & Infrastructure:** Microsoft Azure | Amazon Web Services (AWS) | Kubernetes | Infrastructure as Code (IaC)
+*   **Security & Compliance:** Cryptography | Zero-Trust Architecture | DevSecOps | Security Hardening
+*   **Full-Stack Development:** React | Next.js | TypeScript | Node.js | Express | MongoDB | PostgreSQL | REST APIs
 
-![StoreLunchFlow's GitHub Stats](https://github-readme-stats.vercel.app/api?username=StoreLunchFlow&show_icons=true&theme=radical&hide_title=true&count_private=true)
+## 💻 Portfolio Highlights
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=StoreLunchFlow&layout=compact&theme=radical&hide_title=true)
+*   **[CryptoSphere-Suite](https://github.com/StoreLunchFlow/CryptoSphere-Suite)** - A PowerShell module suite for cryptographic operations, key management, and enhancing automation security.
+*   **[Omnipotent-Suite](https://github.com/StoreLunchFlow/Omnipotent-Suite)** - An enterprise-grade PowerShell framework designed for system orchestration, administrative task automation, and DevOps workflows.
+*   **[StoreLunch E-Commerce Platform](https://github.com/StoreLunchFlow/StoreLunch)** - A full-stack e-commerce application with admin dashboard, product management, and Stripe integration. Built with **Next.js 14**, **TypeScript**, and **MongoDB**.
 
----
+## 📫 Professional Engagement
 
-## ??? Omniversal Toolstack
+I am actively seeking opportunities in:
+*   **DevOps & Site Reliability Engineering (SRE)**
+*   **Cloud Infrastructure Architecture**
+*   **Backend & Full-Stack Development**
+*   **Technical Consulting & Project Collaboration**
 
-**?? Automation & DevOps:** PowerShell | Python | Ansible | GitHub Actions | Docker | Terraform  
-**?? Infrastructure:** Azure | AWS | Kubernetes  
-**?? Security:** Cryptography | Zero-Trust | DevSecOps  
-**?? Full-Stack Development:** React | Next.js | TypeScript | Node.js | Express | MongoDB | PostgreSQL  
-
----
-
-## ?? Cosmic-Class Projects
-
-### [**CryptoSphere-Suite - Cryptographic utilities suite **(Production Ready)**
-Cryptographic utilities suite (2,820+ directories | 27,100+ files) - *The pinnacle of secure software architecture*
-
-### [**Omnipotent Suite**](https://github.com/StoreLunchFlow/Omnipotent-Suite - PowerShell automation framework **(Enterprise Grade)**
-**?? [Live Demo](https://Omnipotent-Suite - PowerShell automation framework **(Enterprise Grade)**
-A comprehensive full-stack application suite showcasing advanced capabilities. Built with a modern tech stack.
-
-### [**StoreLunch**](https://github.com/StoreLunchFlow/StoreLunch)
-**?? [Live Demo](https://Omnipotent-Suite - PowerShell automation framework **(Enterprise Grade)**
-A full-stack platform for [Describe your project's purpose here]. Built with Next.js 14, TypeScript, and MongoDB.
-
-### [**E-Commerce Suite**](https://github.com/StoreLunchFlow/ecommerce-store)
-A complete online store with connected admin dashboard. Features product management, shopping cart, and Stripe payment integration.
+**Let's connect and discuss how I can contribute to your team:**  
+**Email:** [StoreLunchFlow@outlook.com](mailto:StoreLunchFlow@outlook.com)  
+**GitHub:** [https://github.com/StoreLunchFlow](https://github.com/StoreLunchFlow)
 
 ---
-
-## ?? Let's Build Legends Together
-
-I am actively seeking:
-- **Architectural Consulting** on transcendent automation projects
-- **Enterprise-Level Engagements** requiring god-tier DevOps
-- **Visionary Partnerships** to build next-generation infrastructure
-- **Full-Stack Development** opportunities and freelance projects
-
-**?? Immediate Contact:** [StoreLunchFlow@outlook.com](mailto:StoreLunchFlow@outlook.com)
-
----
-
-<p align="center"> 
-  <i>Visitor count</i><br>
-  <img src="https://profile-counter.glitch.me/StoreLunchFlow/count.svg" />
-</p>
-
-<<<<<<< HEAD
-**� 2025 StoreLunchFlow | Omniversal Solutions**  
-=======
-**� 2025 StoreLunchFlow | Omniversal Solutions**  
->>>>>>> 7b5df974432c99b1acc14bd9ab4e39027e5109b8
-*Automation so advanced, it borders on clairvoyance.*
+© 2025 StoreLunchFlow | Portfolio
