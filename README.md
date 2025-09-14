@@ -52,4 +52,5 @@ I am actively seeking opportunities in:
 **GitHub:** [https://github.com/StoreLunchFlow](https://github.com/StoreLunchFlow)
 
 ---
-© 2025 StoreLunchFlow | Developer · Creator · Digital Marketer
+© 2025 StoreLunchFlow | [Portfolio](https://StoreLunchFlow.github.io) | Developer · Creator · Digital Marketer
+
