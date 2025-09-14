@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/store-lunch-flow-web/static/css/main.03327e7f.css",
+    "main.js": "/store-lunch-flow-web/static/js/main.fd9a9a3b.js",
+    "index.html": "/store-lunch-flow-web/index.html",
+    "main.03327e7f.css.map": "/store-lunch-flow-web/static/css/main.03327e7f.css.map",
+    "main.fd9a9a3b.js.map": "/store-lunch-flow-web/static/js/main.fd9a9a3b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03327e7f.css",
+    "static/js/main.fd9a9a3b.js"
+  ]
+}
