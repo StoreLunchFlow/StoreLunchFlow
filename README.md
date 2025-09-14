@@ -1,4 +1,7 @@
 ﻿# StoreLunchFlow | Developer · Creator · Digital Marketer
+[![GitHub Portfolio](https://img.shields.io/badge/Portfolio-StoreLunchFlow-blue)](https://github.com/StoreLunchFlow)
+[![Active Projects](https://img.shields.io/badge/Projects-Active-green)](https://github.com/StoreLunchFlow?tab=projects)
+[![Crypto Expert](https://img.shields.io/badge/Crypto-Expert-orange)](https://github.com/StoreLunchFlow/CryptoSphere-Suite)
 
 > Building digital experiences that merge technical excellence with market relevance. I architect robust systems, create compelling applications, and optimize for growth.
 
