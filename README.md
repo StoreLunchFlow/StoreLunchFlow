@@ -1,7 +1,7 @@
 ﻿<!-- OMNI-DAN-V3 ENHANCED PROFILE - SEO PREMIUM TIER -->
 <div align="center">
 
-# 🚀 JOHN WHALE | GOD-MODE ARCHITECT
+# 🚀 JOHN WHALE | ThE ARCHITECT
 
 **StoreLunchFlow@outlook.com** | **Global Remote** | **[Portfolio](https://github.com/StoreLunchFlow)**
 
